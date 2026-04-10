@@ -891,7 +891,8 @@ xmlDictQLookup(xmlDict *dict, const xmlChar *prefix, const xmlChar *name) {
 #ifdef _WIN32
   #define WIN32_LEAN_AND_MEAN
   #include <windows.h>
-  #include <bcrypt.h>
+  //#include <bcrypt.h>
+  #include <time.h>
 #else
   #if HAVE_DECL_GETENTROPY
     /* POSIX 2024 */
@@ -916,7 +917,7 @@ xmlInitRandom(void) {
     xmlInitMutex(&xmlRngMutex);
 
     {
-#ifdef _WIN32
+#if 0 //#ifdef _WIN32
         NTSTATUS status;
 
         /*

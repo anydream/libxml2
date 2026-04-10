@@ -6,6 +6,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <CustomBuild Include="D:\libxml2\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
     <Filter Include="Source Files">
       <UniqueIdentifier>{F0993A43-32DE-3EAB-A6CF-D270CDB989C7}</UniqueIdentifier>
     </Filter>

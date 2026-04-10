@@ -31,25 +31,25 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>ClangCL</PlatformToolset>
     <LLVMToolsVersion>22</LLVMToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>ClangCL</PlatformToolset>
     <LLVMToolsVersion>22</LLVMToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>ClangCL</PlatformToolset>
     <LLVMToolsVersion>22</LLVMToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>ClangCL</PlatformToolset>
     <LLVMToolsVersion>22</LLVMToolsVersion>
@@ -60,13 +60,13 @@
   <ImportGroup Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="LLVMConfigs.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <Import Project="LLVMConfigs.props" />
   </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="LLVMConfigs.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
@@ -77,30 +77,21 @@
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\libxml2\build_x64\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">LibXml2.dir\Debug\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">libxml2d</TargetName>
-    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
-    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">libxml2sd</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\libxml2\build_x64\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">LibXml2.dir\Release\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libxml2</TargetName>
-    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
-    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libxml2s</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\libxml2\build_x64\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">LibXml2.dir\MinSizeRel\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">libxml2</TargetName>
-    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.dll</TargetExt>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
-    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">libxml2s</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\libxml2\build_x64\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">LibXml2.dir\RelWithDebInfo\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">libxml2</TargetName>
-    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.dll</TargetExt>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
-    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">libxml2s</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
   </PropertyGroup>
-  <PropertyGroup />
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>D:\libxml2\build_x64;D:\libxml2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -131,13 +122,13 @@
       <TreatWChar_tAsBuiltInType>
       </TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CMAKE_INTDIR="Debug";LibXml2_EXPORTS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;LIBXML_STATIC;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
       <AdditionalOptions>/clang:-flto %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\";LibXml2_EXPORTS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;LIBXML_STATIC;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>D:\libxml2\build_x64;D:\libxml2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
@@ -148,28 +139,9 @@
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
-    <Link>
-      <AdditionalDependencies>bcrypt.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    <Lib>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
-      <DataExecutionPrevention>
-      </DataExecutionPrevention>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImageHasSafeExceptionHandlers>
-      </ImageHasSafeExceptionHandlers>
-      <ImportLibrary>D:/libxml2/build_x64/Debug/libxml2d.lib</ImportLibrary>
-      <LinkErrorReporting>
-      </LinkErrorReporting>
-      <ProgramDataBaseFile>D:/libxml2/build_x64/Debug/libxml2d.pdb</ProgramDataBaseFile>
-      <RandomizedBaseAddress>
-      </RandomizedBaseAddress>
-      <SubSystem>Console</SubSystem>
-      <Version>16.2</Version>
-    </Link>
-    <ProjectReference>
-      <LinkLibraryDependencies>false</LinkLibraryDependencies>
-    </ProjectReference>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -200,7 +172,7 @@
       <TreatWChar_tAsBuiltInType>
       </TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release";LibXml2_EXPORTS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;LIBXML_STATIC;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
@@ -208,7 +180,7 @@
       <AdditionalOptions>/clang:-flto %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\";LibXml2_EXPORTS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;LIBXML_STATIC;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>D:\libxml2\build_x64;D:\libxml2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
@@ -219,28 +191,9 @@
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
-    <Link>
-      <AdditionalDependencies>bcrypt.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    <Lib>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
-      <DataExecutionPrevention>
-      </DataExecutionPrevention>
-      <GenerateDebugInformation>false</GenerateDebugInformation>
-      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImageHasSafeExceptionHandlers>
-      </ImageHasSafeExceptionHandlers>
-      <ImportLibrary>D:/libxml2/build_x64/Release/libxml2.lib</ImportLibrary>
-      <LinkErrorReporting>
-      </LinkErrorReporting>
-      <ProgramDataBaseFile>D:/libxml2/build_x64/Release/libxml2.pdb</ProgramDataBaseFile>
-      <RandomizedBaseAddress>
-      </RandomizedBaseAddress>
-      <SubSystem>Console</SubSystem>
-      <Version>16.2</Version>
-    </Link>
-    <ProjectReference>
-      <LinkLibraryDependencies>false</LinkLibraryDependencies>
-    </ProjectReference>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
@@ -271,7 +224,7 @@
       <TreatWChar_tAsBuiltInType>
       </TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel";LibXml2_EXPORTS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;LIBXML_STATIC;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
@@ -279,7 +232,7 @@
       <AdditionalOptions>/clang:-flto %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\";LibXml2_EXPORTS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;LIBXML_STATIC;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>D:\libxml2\build_x64;D:\libxml2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
@@ -290,28 +243,9 @@
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
-    <Link>
-      <AdditionalDependencies>bcrypt.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    <Lib>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
-      <DataExecutionPrevention>
-      </DataExecutionPrevention>
-      <GenerateDebugInformation>false</GenerateDebugInformation>
-      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImageHasSafeExceptionHandlers>
-      </ImageHasSafeExceptionHandlers>
-      <ImportLibrary>D:/libxml2/build_x64/MinSizeRel/libxml2.lib</ImportLibrary>
-      <LinkErrorReporting>
-      </LinkErrorReporting>
-      <ProgramDataBaseFile>D:/libxml2/build_x64/MinSizeRel/libxml2.pdb</ProgramDataBaseFile>
-      <RandomizedBaseAddress>
-      </RandomizedBaseAddress>
-      <SubSystem>Console</SubSystem>
-      <Version>16.2</Version>
-    </Link>
-    <ProjectReference>
-      <LinkLibraryDependencies>false</LinkLibraryDependencies>
-    </ProjectReference>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
@@ -343,13 +277,13 @@
       <TreatWChar_tAsBuiltInType>
       </TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo";LibXml2_EXPORTS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;LIBXML_STATIC;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
       <AdditionalOptions>/clang:-flto %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\";LibXml2_EXPORTS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;LIBXML_STATIC;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>D:\libxml2\build_x64;D:\libxml2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
@@ -360,29 +294,67 @@
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
-    <Link>
-      <AdditionalDependencies>bcrypt.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    <Lib>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
-      <DataExecutionPrevention>
-      </DataExecutionPrevention>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImageHasSafeExceptionHandlers>
-      </ImageHasSafeExceptionHandlers>
-      <ImportLibrary>D:/libxml2/build_x64/RelWithDebInfo/libxml2.lib</ImportLibrary>
-      <LinkErrorReporting>
-      </LinkErrorReporting>
-      <ProgramDataBaseFile>D:/libxml2/build_x64/RelWithDebInfo/libxml2.pdb</ProgramDataBaseFile>
-      <RandomizedBaseAddress>
-      </RandomizedBaseAddress>
-      <SubSystem>Console</SubSystem>
-      <Version>16.2</Version>
-    </Link>
-    <ProjectReference>
-      <LinkLibraryDependencies>false</LinkLibraryDependencies>
-    </ProjectReference>
+    </Lib>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\libxml2\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/libxml2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -SD:/libxml2 -BD:/libxml2/build_x64 --check-stamp-file D:/libxml2/build_x64/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Program Files\CMake\share\cmake-4.3\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakeCInformation.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakeCommonLanguageInclude.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakeDependentOption.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakeGenericSystem.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakeInitializeConfigs.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakeLanguageInformation.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakePackageConfigHelpers.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakePushCheckState.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakeRCInformation.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakeSystemSpecificInformation.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakeSystemSpecificInitialize.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CPack.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CPackComponent.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CheckCSourceCompiles.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CheckCXXSourceCompiles.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CheckFunctionExists.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CheckIncludeFile.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CheckIncludeFiles.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CheckLibraryExists.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CheckSourceCompiles.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CheckStructHasMember.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CheckSymbolExists.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\MSVC-C.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\MSVC.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageHandleStandardArgs.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageMessage.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\FindPkgConfig.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\FindThreads.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\GNUInstallDirs.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CMakeCLinkerInformation.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CMakeCommonLinkerInformation.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CheckSourceCompiles.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Linker\MSVC-C.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Linker\MSVC.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Linker\Windows-MSVC-C.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Linker\Windows-MSVC.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-Initialize.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-MSVC-C.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-MSVC.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Platform\WindowsPaths.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\WriteBasicConfigVersionFile.cmake;D:\Program Files\CMake\share\cmake-4.3\Templates\CPackConfig.cmake.in;D:\libxml2\build_x64\CMakeFiles\4.3.0-rc2\CMakeCCompiler.cmake;D:\libxml2\build_x64\CMakeFiles\4.3.0-rc2\CMakeRCCompiler.cmake;D:\libxml2\build_x64\CMakeFiles\4.3.0-rc2\CMakeSystem.cmake;D:\libxml2\config.h.cmake.in;D:\libxml2\include\libxml\xmlversion.h.in;D:\libxml2\libxml-2.0.pc.in;D:\libxml2\libxml2-config.cmake.cmake.in;D:\libxml2\xml2-config.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\libxml2\build_x64\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/libxml2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -SD:/libxml2 -BD:/libxml2/build_x64 --check-stamp-file D:/libxml2/build_x64/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Program Files\CMake\share\cmake-4.3\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakeCInformation.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakeCommonLanguageInclude.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakeDependentOption.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakeGenericSystem.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakeInitializeConfigs.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakeLanguageInformation.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakePackageConfigHelpers.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakePushCheckState.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakeRCInformation.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakeSystemSpecificInformation.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakeSystemSpecificInitialize.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CPack.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CPackComponent.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CheckCSourceCompiles.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CheckCXXSourceCompiles.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CheckFunctionExists.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CheckIncludeFile.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CheckIncludeFiles.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CheckLibraryExists.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CheckSourceCompiles.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CheckStructHasMember.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CheckSymbolExists.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\MSVC-C.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\MSVC.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageHandleStandardArgs.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageMessage.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\FindPkgConfig.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\FindThreads.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\GNUInstallDirs.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CMakeCLinkerInformation.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CMakeCommonLinkerInformation.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CheckSourceCompiles.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Linker\MSVC-C.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Linker\MSVC.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Linker\Windows-MSVC-C.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Linker\Windows-MSVC.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-Initialize.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-MSVC-C.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-MSVC.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Platform\WindowsPaths.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\WriteBasicConfigVersionFile.cmake;D:\Program Files\CMake\share\cmake-4.3\Templates\CPackConfig.cmake.in;D:\libxml2\build_x64\CMakeFiles\4.3.0-rc2\CMakeCCompiler.cmake;D:\libxml2\build_x64\CMakeFiles\4.3.0-rc2\CMakeRCCompiler.cmake;D:\libxml2\build_x64\CMakeFiles\4.3.0-rc2\CMakeSystem.cmake;D:\libxml2\config.h.cmake.in;D:\libxml2\include\libxml\xmlversion.h.in;D:\libxml2\libxml-2.0.pc.in;D:\libxml2\libxml2-config.cmake.cmake.in;D:\libxml2\xml2-config.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\libxml2\build_x64\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/libxml2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -SD:/libxml2 -BD:/libxml2/build_x64 --check-stamp-file D:/libxml2/build_x64/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Program Files\CMake\share\cmake-4.3\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakeCInformation.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakeCommonLanguageInclude.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakeDependentOption.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakeGenericSystem.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakeInitializeConfigs.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakeLanguageInformation.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakePackageConfigHelpers.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakePushCheckState.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakeRCInformation.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakeSystemSpecificInformation.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakeSystemSpecificInitialize.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CPack.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CPackComponent.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CheckCSourceCompiles.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CheckCXXSourceCompiles.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CheckFunctionExists.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CheckIncludeFile.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CheckIncludeFiles.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CheckLibraryExists.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CheckSourceCompiles.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CheckStructHasMember.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CheckSymbolExists.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\MSVC-C.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\MSVC.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageHandleStandardArgs.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageMessage.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\FindPkgConfig.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\FindThreads.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\GNUInstallDirs.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CMakeCLinkerInformation.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CMakeCommonLinkerInformation.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CheckSourceCompiles.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Linker\MSVC-C.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Linker\MSVC.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Linker\Windows-MSVC-C.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Linker\Windows-MSVC.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-Initialize.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-MSVC-C.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-MSVC.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Platform\WindowsPaths.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\WriteBasicConfigVersionFile.cmake;D:\Program Files\CMake\share\cmake-4.3\Templates\CPackConfig.cmake.in;D:\libxml2\build_x64\CMakeFiles\4.3.0-rc2\CMakeCCompiler.cmake;D:\libxml2\build_x64\CMakeFiles\4.3.0-rc2\CMakeRCCompiler.cmake;D:\libxml2\build_x64\CMakeFiles\4.3.0-rc2\CMakeSystem.cmake;D:\libxml2\config.h.cmake.in;D:\libxml2\include\libxml\xmlversion.h.in;D:\libxml2\libxml-2.0.pc.in;D:\libxml2\libxml2-config.cmake.cmake.in;D:\libxml2\xml2-config.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\libxml2\build_x64\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/libxml2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -SD:/libxml2 -BD:/libxml2/build_x64 --check-stamp-file D:/libxml2/build_x64/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Program Files\CMake\share\cmake-4.3\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakeCInformation.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakeCommonLanguageInclude.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakeDependentOption.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakeGenericSystem.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakeInitializeConfigs.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakeLanguageInformation.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakePackageConfigHelpers.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakePushCheckState.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakeRCInformation.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakeSystemSpecificInformation.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CMakeSystemSpecificInitialize.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CPack.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CPackComponent.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CheckCSourceCompiles.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CheckCXXSourceCompiles.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CheckFunctionExists.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CheckIncludeFile.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CheckIncludeFiles.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CheckLibraryExists.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CheckSourceCompiles.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CheckStructHasMember.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\CheckSymbolExists.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\MSVC-C.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\MSVC.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageHandleStandardArgs.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageMessage.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\FindPkgConfig.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\FindThreads.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\GNUInstallDirs.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CMakeCLinkerInformation.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CMakeCommonLinkerInformation.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CheckSourceCompiles.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Linker\MSVC-C.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Linker\MSVC.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Linker\Windows-MSVC-C.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Linker\Windows-MSVC.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-Initialize.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-MSVC-C.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-MSVC.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\Platform\WindowsPaths.cmake;D:\Program Files\CMake\share\cmake-4.3\Modules\WriteBasicConfigVersionFile.cmake;D:\Program Files\CMake\share\cmake-4.3\Templates\CPackConfig.cmake.in;D:\libxml2\build_x64\CMakeFiles\4.3.0-rc2\CMakeCCompiler.cmake;D:\libxml2\build_x64\CMakeFiles\4.3.0-rc2\CMakeRCCompiler.cmake;D:\libxml2\build_x64\CMakeFiles\4.3.0-rc2\CMakeSystem.cmake;D:\libxml2\config.h.cmake.in;D:\libxml2\include\libxml\xmlversion.h.in;D:\libxml2\libxml-2.0.pc.in;D:\libxml2\libxml2-config.cmake.cmake.in;D:\libxml2\xml2-config.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\libxml2\build_x64\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
   <ItemGroup>
     <ClInclude Include="D:\libxml2\include\libxml\c14n.h" />
     <ClInclude Include="D:\libxml2\include\libxml\catalog.h" />
@@ -489,6 +461,12 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="D:\libxml2\build_x64\ZERO_CHECK.vcxproj">
+      <Project>{7FF64CFA-68E7-3ECC-907F-45500AA35D4D}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

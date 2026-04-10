@@ -234,6 +234,9 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <CustomBuild Include="D:\libxml2\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
     <ResourceCompile Include="D:\libxml2\win32\libxml2.rc">
       <Filter>win32</Filter>
     </ResourceCompile>
